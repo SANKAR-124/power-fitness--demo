@@ -2,12 +2,15 @@ from flask import Flask, render_template, request, redirect, url_for, flash, jso
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail,Message
 import random
+import os
 
 
 app=Flask(__name__)
 
 # --- Database Configuration ---
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1246@localhost/pf_db'
+# This line tells the app to use Render's database URL when live,
+# but fall back to your local MySQL for development.
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'mysql://root:1246@localhost/pf_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
