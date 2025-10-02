@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="gym in palakkad, fitness center, personal training, weight loss, bodybuilding" />
+  <meta name="description" content="Power Fitness is Palakkad's premier gym for achieving your strength and fitness goals. We offer personal training, nutrition plans, and a state-of-the-art facility." />
+  <meta name="author" content="SANKAR" />
+
+  <title>Power Fitness - Shape Your Future</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- responsive style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo of the gym" />
+            <span>
+              Power Fitness
+            </span>
+          </a>
+          <div class="contact_nav" id="">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/location.png') }}" alt="location icon" />
+                  <span>Location</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/call.png') }}" alt="phone icon" />
+                  <span>Call : + 01 1234567890</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/envelope.png') }}" alt="mailicon" />
+                  <span>demo@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div class="custom_nav2">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex  flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">About </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('service') }}">Services </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- contact section -->
+  <section class="contact_section contact_section1 layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          <span>
+            Get In Touch
+          </span>
+        </h2>
+      </div>
+      <div class="layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6 ">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-success mt-3">
+              {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <form method="post" action="{{ url_for('contact') }}">
+              <div class="contact_form-container">
+                <div>
+                  <div>
+                    <input type="text" placeholder="Name" name="name" required />
+                  </div>
+                  <div>
+                    <input type="email" placeholder="Email" name="email" required />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Phone Number" name="phone" />
+                  </div>
+                  <div class="mt-5">
+                    <input type="text" placeholder="Message" name="message" required />
+                  </div>
+                  <div class="mt-5">
+                    <button type="submit">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-details mb-4">
+
+              <h3>Contact Info</h3>
+              <p><strong>Phone:</strong> +91 12345 67890</p>
+              <p><strong>Email:</strong> info@powerfitnesspalakkad.com</p>
+
+              <hr style="background-color: #555;">
+
+              <h3>Opening Hours</h3>
+              <ul class="hours-list">
+                <li><strong>Mon - Fri:</strong> 6:00 AM - 10:00 PM</li>
+                <li><strong>Saturday:</strong> 8:00 AM - 8:00 PM</li>
+                <li><strong>Sunday:</strong> 8:00 AM - 4:00 PM</li>
+              </ul>
+
+              <hr style="background-color: #555;">
+
+              <a href="https://wa.me/911234567890?text=Hi!%20I'm%20interested%20in%20joining%20Power%20Fitness."
+                class="btn btn-success btn-block" target="_blank"><i class="fab fa-whatsapp"></i>
+                Chat with us on WhatsApp
+              </a>
+
+            </div>
+            <div class="map_container">
+              <div class="map-responsive">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.153298724055!2d76.81632760089956!3d10.79956852604611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba869e4f1c5cc71%3A0xfdc0eeba16660463!2sAhalia%20School%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1759319505262!5m2!1sen!2sin"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2-top">
+    <!-- <div class="container">
+      <div class="info_form">
+        <h4>
+          Our Newsletter
+        </h4>
+        <form action="">
+          <input type="text" placeholder="Enter your email">
+          <div class="d-flex justify-content-end">
+            <button>
+              subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>
+            About Power Fitness
+          </h6>
+          <p>
+            Welcome to Power Fitness, Palakkad's premier destination for transformation. We believe strength is more
+            than just muscle—it's the power to build a better you.
+          </p>
+        </div>
+        <div class="col-md-2 offset-md-1">
+          <h6>
+            Menus
+          </h6>
+          <ul>
+            <li class=" active">
+              <a class="" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('about') }}">About </a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('service') }}">Services </a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('contact') }}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Useful Links
+          </h6>
+          <ul>
+            <li>
+              <a href="">
+                Adipiscing
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Elit, sed
+              </a>
+            </li>
+            <li>
+              <a href="">
+                do Eiusmod
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Tempor
+              </a>
+            </li>
+            <li>
+              <a href="">
+                incididunt
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Contact Us
+          </h6>
+          <div class="info_link-box">
+            <a href="">
+              <img src="{{ url_for('static',filename='images/location-white.png') }}" alt="logo icon">
+              <span> No.123, loram ipusm</span>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static',filename='images/call-white.png') }}" alt="phone icon">
+              <span>+01 12345678901</span>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static',filename='images/mail-white.png') }}" alt="mail icon">
+              <span> demo123@gmail.com</span>
+            </a>
+          </div>
+          <div class="info_social">
+            <div>
+              <a href="">
+                <img src="{{ url_for('static',filename='images/facebook-logo-button.png') }}" alt="logo of facebook">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="{{ url_for('static',filename='images/linkedin.png') }}" alt="logo of linkedin">
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/sankar__krishna_/" target="_blank">
+                <img src="{{ url_for('static',filename='images/instagram.png') }}" alt="logo of instagram">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <p>
+      &copy; 2025 All Rights Reserved. Design by
+      SANKAR
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>

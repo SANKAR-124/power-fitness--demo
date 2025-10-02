@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="gym in palakkad, fitness center, personal training, weight loss, bodybuilding" />
+  <meta name="description" content="Power Fitness is Palakkad's premier gym for achieving your strength and fitness goals. We offer personal training, nutrition plans, and a state-of-the-art facility." />
+  <meta name="author" content="SANKAR" />
+
+  <title>Power Fitness - Shape Your Future</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- responsive style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body class="sub_page about_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo of the gym" />
+            <span>
+              Power Fitness
+            </span>
+          </a>
+          <div class="contact_nav" id="">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/location.png') }}" alt="location icon" />
+                  <span>Location</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/call.png') }}" alt="phone icon" />
+                  <span>Call : + 01 1234567890</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/envelope.png') }}" alt="mailicon" />
+                  <span>demo@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div class="custom_nav2">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex  flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('about') }}">About </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('service') }}">Services </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          About Power Fitness
+        </h2>
+      </div>
+      <div class="box">
+        <div class="img-box">
+          <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo of the gym">
+        </div>
+        <div class="detail-box">
+          <p>
+            Power Fitness was born from a simple yet powerful idea: that everyone holds the potential to be a stronger, more resilient version of themselves. Here in the heart of Palakkad, we set out to build more than just a place to lift weights; we created a true fitness home. It's a space where ambition is nurtured, expert guidance is always available, and a supportive community pushes you to achieve what you once thought was impossible. We've equipped our facility with top-tier strength and cardio equipment, but our greatest pride is our team of certified trainers who are passionately committed to your journey. We believe the strength forged here—the discipline, the confidence, the energy—extends far beyond the gym walls, empowering you in every aspect of your life. We invite you to join our community and discover the power within you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+  <section class="trainers_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Meet Our Expert Trainers</h2>
+      </div>
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="trainer_card">
+            <div class="trainer_img-box">
+              <img src="{{ url_for('static', filename='images/trainer-1.jpg') }}" alt="Photo of Head Trainer Alex Doe">
+            </div>
+            <div class="trainer_detail-box">
+              <h5>Alex Doe</h5>
+              <h6>Head Trainer</h6>
+              <p>With over 10 years of experience, Alex specializes in strength training and athletic performance.</p>
+              <div class="trainer_social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="trainer_card">
+            <div class="trainer_img-box">
+              <img src="{{ url_for('static', filename='images/trainer-2.jpg') }}"
+                alt="Photo of Yoga Instructor Maria Garcia">
+            </div>
+            <div class="trainer_detail-box">
+              <h5>Maria Garcia</h5>
+              <h6>Yoga Instructor</h6>
+              <p>Maria is a certified yoga instructor who believes in the power of mindfulness and flexibility. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio totam nulla libero alias mollitia delectus facere aspernatur assumenda ex quia.</p>
+              <div class="trainer_social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="trainer_card">
+            <div class="trainer_img-box">
+              <img src="{{ url_for('static', filename='images/trainer-3.jpg') }}"
+                alt="Photo of Cardio Specialist Ben Carter">
+            </div>
+            <div class="trainer_detail-box">
+              <h5>Ben Carter</h5>
+              <h6>Cardio Specialist</h6>
+              <p>Ben designs high-intensity interval training (HIIT) programs that get results fast.</p>
+              <div class="trainer_social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- info section -->
+
+  <section class="info_section layout_padding2-top">
+    <!-- <div class="container">
+      <div class="info_form">
+        <h4>
+          Our Newsletter
+        </h4>
+        <form action="">
+          <input type="text" placeholder="Enter your email">
+          <div class="d-flex justify-content-end">
+            <button>
+              subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>
+            About Power Fitness
+          </h6>
+          <p>
+            Welcome to Power Fitness, Palakkad's premier destination for transformation. We believe strength is more than just muscle—it's the power to build a better you.
+          </p>
+        </div>
+        <div class="col-md-2 offset-md-1">
+          <h6>
+            Menus
+          </h6>
+          <ul>
+            <li class=" active">
+              <a class="" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('about') }}">About </a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('service') }}">Services </a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('contact') }}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Useful Links
+          </h6>
+          <ul>
+            <li>
+              <a href="">
+                Adipiscing
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Elit, sed
+              </a>
+            </li>
+            <li>
+              <a href="">
+                do Eiusmod
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Tempor
+              </a>
+            </li>
+            <li>
+              <a href="">
+                incididunt
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Contact Us
+          </h6>
+          <div class="info_link-box">
+            <a href="">
+              <img src="{{ url_for('static',filename='images/location-white.png') }}" alt="logo icon">
+              <span> No.123, loram ipusm</span>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static',filename='images/call-white.png') }}" alt="phone icon">
+              <span>+01 12345678901</span>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static',filename='images/mail-white.png') }}" alt="mail icon">
+              <span> demo123@gmail.com</span>
+            </a>
+          </div>
+          <div class="info_social">
+            <div>
+              <a href="">
+                <img src="{{ url_for('static',filename='images/facebook-logo-button.png') }}" alt="facebook logo">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="{{ url_for('static',filename='images/linkedin.png') }}" alt="linkedin logo">
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/sankar__krishna_/" target="_blank">
+                <img src="{{ url_for('static',filename='images/instagram.png') }}" alt="logo of instagram">
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <p>
+      &copy; 2025 All Rights Reserved. Design by
+      SANKAR
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>

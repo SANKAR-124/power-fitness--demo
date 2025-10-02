@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="gym in palakkad, fitness center, personal training, weight loss, bodybuilding" />
+  <meta name="description" content="Power Fitness is Palakkad's premier gym for achieving your strength and fitness goals. We offer personal training, nutrition plans, and a state-of-the-art facility." />
+  <meta name="author" content="SANKAR" />
+
+  <title>Power Fitness - Shape Your Future</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- responsive style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static',filename='images/logo.png') }}" alt="logo of the gym" />
+            <span>
+              Power Fitness
+            </span>
+          </a>
+          <div class="contact_nav" id="">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/location.png') }}" alt="location icon" />
+                  <span>Location</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/call.png') }}" alt="phone icon" />
+                  <span>Call : + 01 1234567890</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">
+                  <img src="{{ url_for('static',filename='images/envelope.png') }}" alt="mailicon" />
+                  <span>demo@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div class="container">
+        <div class="custom_nav2">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex  flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}">About </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('service') }}">Services </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <section class="pricing_section layout_padding" id="memb-plans">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Our Membership Plans</h2>
+        <p>Choose the plan that's right for you. All plans include a one-time registration fee of ₹500.</p>
+      </div>
+
+      <div class="row" id="membership-plans">
+        <div class="col-md-4">
+          <div class="price_card">
+            <div class="price_header">
+              <h3>Starter</h3>
+              <h4>₹699<span>/mo</span></h4>
+            </div>
+            <ul class="price_features">
+              <li><i class="fa fa-check"></i> General Gym Access</li>
+              <li><i class="fa fa-check"></i> Locker Rooms</li>
+              <li><i class="fa fa-times"></i> Cardio Section Access</li>
+              <li><i class="fa fa-times"></i> Nutrition Plan</li>
+              <li><i class="fa fa-times"></i> Personal Trainer</li>
+            </ul>
+            <div class="price_footer">
+              <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="price_card popular">
+            <div class="price_header">
+              <h3>Pro</h3>
+              <h4>₹999<span>/mo</span></h4>
+            </div>
+            <ul class="price_features">
+              <li><i class="fa fa-check"></i> General Gym Access</li>
+              <li><i class="fa fa-check"></i> Locker Rooms</li>
+              <li><i class="fa fa-check"></i> Cardio Section Access</li>
+              <li><i class="fa fa-times"></i> Nutrition Plan</li>
+              <li><i class="fa fa-times"></i> Personal Trainer</li>
+            </ul>
+            <div class="price_footer">
+              <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="price_card">
+            <div class="price_header">
+              <h3>Elite</h3>
+              <h4>₹3,499<span>/mo</span></h4>
+            </div>
+            <ul class="price_features">
+              <li><i class="fa fa-check"></i> General Gym Access</li>
+              <li><i class="fa fa-check"></i> Locker Rooms</li>
+              <li><i class="fa fa-check"></i> Cardio Section Access</li>
+              <li><i class="fa fa-check"></i> Custom Nutrition Plan</li>
+              <li><i class="fa fa-check"></i> Full Personal Training</li>
+            </ul>
+            <div class="price_footer">
+              <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-5">
+          <div class="extra_card">
+            <h4><i class="fa fa-users"></i> Family Package</h4>
+            <p>Bring the whole family! For groups of 3 or more, the registration fee is waived. (Minimum 3-month
+              commitment required).</p>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="extra_card">
+            <h4><i class="fa fa-star"></i> Membership Rewards</h4>
+            <p>Earn points for every visit! 100 points gets you a ₹500 reward, which is automatically deducted from your
+              next month's fees.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Services
+        </h2>
+      </div>
+      <div class="service_container">
+
+    <div class="box">
+        <img src="{{ url_for('static',filename='images/s-1.jpg') }}" alt="personal training photo">
+        <h6 class="visible_heading">PERSONAL TRAINING</h6>
+        <div class="link_box">
+            <a href="{{ url_for('service') }}#personal-training-details">
+                <img src="{{ url_for('static',filename='images/link.png') }}" alt="link to personal training details">
+            </a>
+            <h6>PERSONAL TRAINING</h6>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{ url_for('static',filename='images/s-2.jpg') }}" alt="a photo showing fitness">
+        <h6 class="visible_heading">FITNESS</h6>
+        <div class="link_box">
+            <a href="{{ url_for('service') }}#fitness-training-details">
+                <img src="{{ url_for('static',filename='images/link.png') }}" alt="link to fitness details">
+            </a>
+            <h6>FITNESS</h6>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{ url_for('static',filename='images/s-3.jpg') }}" alt="weight training photo">
+        <h6 class="visible_heading">WEIGHT TRAINING</h6>
+        <div class="link_box">
+            <a href="{{ url_for('service') }}#weight-training-details">
+                <img src="{{ url_for('static',filename='images/link.png') }}" alt="link to weight training details">
+            </a>
+            <h6>WEIGHT TRAINING</h6>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{ url_for('static',filename='images/s-4.jpg') }}" alt="body building photo">
+        <h6 class="visible_heading">BODY BUILDING</h6>
+        <div class="link_box">
+            <a href="{{ url_for('service') }}#body-building-details">
+                <img src="{{ url_for('static',filename='images/link.png') }}" alt="link to body building details">
+            </a>
+            <h6>BODY BUILDING</h6>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{ url_for('static',filename='images/s-5.jpg') }}" alt=" a doing workout photo">
+        <h6 class="visible_heading">WORKOUT</h6>
+        <div class="link_box">
+            <a href="{{ url_for('service') }}#workout-training-details">
+                <img src="{{ url_for('static',filename='images/link.png') }}" alt="link to workout details">
+            </a>
+            <h6>WORKOUT</h6>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="{{ url_for('static',filename='images/s-6.jpg') }}" alt="crossfit training photo">
+        <h6 class="visible_heading">CROSSFIT TRAINING</h6>
+        <div class="link_box">
+            <a href="{{ url_for('service') }}#crossfit-details">
+                <img src="{{ url_for('static',filename='images/link.png') }}" alt="link to crossfit training details">
+            </a>
+            <h6>CROSSFIT TRAINING</h6>
+        </div>
+    </div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+  <!-- ========== Detailed Services Carousel Section ========== -->
+  <section class="detailed-service-slider layout_padding">
+    <div class="container">
+
+      <!-- Service 1: Personal Training -->
+      <div class="row justify-content-center" id="personal-training-details">
+        <div class="col-md-10">
+          <!-- Heading -->
+          <div class="heading_container">
+            <h2>Personal Training</h2>
+          </div>
+
+          <!-- Image Slider / Carousel -->
+          <div id="personalTrainingCarousel" class="carousel slide shadow-lg rounded" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#personalTrainingCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#personalTrainingCarousel" data-slide-to="1"></li>
+              <li data-target="#personalTrainingCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/s-1.jpg') }}" class="d-block w-100"
+                  alt="Personal training session one">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/trainer-1.jpg') }}" class="d-block w-100"
+                  alt="Personal training session two">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/result-img.jpg') }}" class="d-block w-100"
+                  alt="Personal training results">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#personalTrainingCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#personalTrainingCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <!-- Description Paragraph -->
+          <div class="service-description">
+            <p>Our certified personal trainers will work with you one-on-one to create a customized workout plan
+              tailored to your specific goals, whether it's weight loss, muscle gain, or athletic performance. We focus
+              on proper form and technique to ensure you get the best results safely.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" style="background-color: #555;">
+
+      <div class="row justify-content-center" id="weight-training-details">
+        <div class="col-md-10">
+          <div class="heading_container">
+            <h2>Weight Training</h2>
+          </div>
+
+          <div id="weightTrainingCarousel" class="carousel slide shadow-lg rounded" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#weightTrainingCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#weightTrainingCarousel" data-slide-to="1"></li>
+              <li data-target="#weightTrainingCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/s-3.jpg') }}" class="d-block w-100"
+                  alt="Weight training area one">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-4.jpg') }}" class="d-block w-100"
+                  alt="Weight training area two">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-1.jpg') }}" class="d-block w-100"
+                  alt="Weight training results">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#weightTrainingCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#weightTrainingCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="service-description">
+            <p>Build strength and muscle in our fully-equipped weight training zone. We have a wide range of free
+              weights, barbells, dumbbells, and resistance machines to challenge every muscle group.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" style="background-color: #555;">
+
+      <div class="row justify-content-center" id="workout-training-details">
+        <div class="col-md-10">
+          <div class="heading_container">
+            <h2>Workout</h2>
+          </div>
+
+          <div id="workoutTrainingCarousel" class="carousel slide shadow-lg rounded" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#workoutTrainingCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#workoutTrainingCarousel" data-slide-to="1"></li>
+              <li data-target="#workoutTrainingCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/s-3.jpg') }}" class="d-block w-100"
+                  alt="workout training area one">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-4.jpg') }}" class="d-block w-100"
+                  alt="workout training area two">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-1.jpg') }}" class="d-block w-100"
+                  alt="workout training results">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#workoutTrainingCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#workoutTrainingCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="service-description">
+            <p>Build strength and muscle in our fully-equipped weight training zone. We have a wide range of free
+              weights, barbells, dumbbells, and resistance machines to challenge every muscle group.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" style="background-color: #555;">
+
+      <div class="row justify-content-center" id="fitness-training-details">
+        <div class="col-md-10">
+          <div class="heading_container">
+            <h2>Fitness</h2>
+          </div>
+
+          <div id="fitnessTrainingCarousel" class="carousel slide shadow-lg rounded" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#fitnessTrainingCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#fitnessTrainingCarousel" data-slide-to="1"></li>
+              <li data-target="#fitnessTrainingCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/s-3.jpg') }}" class="d-block w-100"
+                  alt="fitness training area one">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-4.jpg') }}" class="d-block w-100"
+                  alt="fitness training area two">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-1.jpg') }}" class="d-block w-100"
+                  alt="fitness training results">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#fitnessTrainingCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#fitnessTrainingCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="service-description">
+            <p>Build strength and muscle in our fully-equipped weight training zone. We have a wide range of free
+              weights, barbells, dumbbells, and resistance machines to challenge every muscle group.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" style="background-color: #555;">
+
+      <div class="row justify-content-center" id="body-building-details">
+        <div class="col-md-10">
+          <div class="heading_container">
+            <h2>Body Building</h2>
+          </div>
+
+          <div id="bodybuildingCarousel" class="carousel slide shadow-lg rounded" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#bodybuildingCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#bodybuildingCarousel" data-slide-to="1"></li>
+              <li data-target="#bodybuildingCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/s-3.jpg') }}" class="d-block w-100"
+                  alt="body building area one">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-4.jpg') }}" class="d-block w-100"
+                  alt="body building area two">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/s-1.jpg') }}" class="d-block w-100"
+                  alt="body building results">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#bodybuildingCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#bodybuildingCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+          <div class="service-description">
+            <p>Build strength and muscle in our fully-equipped weight training zone. We have a wide range of free
+              weights, barbells, dumbbells, and resistance machines to challenge every muscle group.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" style="background-color: #555;">
+
+      <div class="row justify-content-center" id="crossfit-details">
+        <div class="col-md-10">
+          <div class="heading_container">
+            <h2>Crossfit Training</h2>
+          </div>
+
+          <div id="crossfitCarousel" class="carousel slide shadow-lg rounded" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#crossfitCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#crossfitCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='images/s-6.jpg') }}" class="d-block w-100"
+                  alt="Crossfit training session">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ url_for('static', filename='images/result-img.jpg') }}" class="d-block w-100"
+                  alt="Crossfit results">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#crossfitCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#crossfitCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div class="service-description">
+            <p>Our Crossfit program combines elements of high-intensity interval training, weightlifting, and gymnastics
+              to build well-rounded functional fitness. Every workout is different, keeping you challenged and engaged.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- We can add more services here later -->
+
+    </div>
+  </section>
+  <!-- ========== Detailed Services Section End ========== -->
+  <!-- info section -->
+
+  <section class="info_section layout_padding2-top">
+    <!-- <div class="container">
+      <div class="info_form">
+        <h4>
+          Our Newsletter
+        </h4>
+        <form action="">
+          <input type="text" placeholder="Enter your email">
+          <div class="d-flex justify-content-end">
+            <button>
+              subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>
+            About Power Fitness
+          </h6>
+          <p>
+            Welcome to Power Fitness, Palakkad's premier destination for transformation. We believe strength is more than just muscle—it's the power to build a better you.
+          </p>
+        </div>
+        <div class="col-md-2 offset-md-1">
+          <h6>
+            Menus
+          </h6>
+          <ul>
+            <li class=" active">
+              <a class="" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('about') }}">About </a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('service') }}">Services </a>
+            </li>
+            <li class="">
+              <a class="" href="{{ url_for('contact') }}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Useful Links
+          </h6>
+          <ul>
+            <li>
+              <a href="">
+                Adipiscing
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Elit, sed
+              </a>
+            </li>
+            <li>
+              <a href="">
+                do Eiusmod
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Tempor
+              </a>
+            </li>
+            <li>
+              <a href="">
+                incididunt
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Contact Us
+          </h6>
+          <div class="info_link-box">
+            <a href="">
+              <img src="{{ url_for('static',filename='images/location-white.png') }}" alt="logo icon">
+              <span> No.123, loram ipusm</span>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static',filename='images/call-white.png') }}" alt="phone icon">
+              <span>+01 12345678901</span>
+            </a>
+            <a href="">
+              <img src="{{ url_for('static',filename='images/mail-white.png') }}" alt="mail icon">
+              <span> demo1234@gmail.com</span>
+            </a>
+          </div>
+          <div class="info_social">
+            <div>
+              <a href="">
+                <img src="{{ url_for('static',filename='images/facebook-logo-button.png') }}" alt="logo of facebook">
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="{{ url_for('static',filename='images/linkedin.png') }}" alt="logo of linkedin">
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/sankar__krishna_/" target="_blank">
+                <img src="{{ url_for('static',filename='images/instagram.png') }}" alt="logo of instagram">
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <p>
+      &copy; 2025 All Rights Reserved. Design by
+      SANKAR
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="{{ url_for('static',filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static',filename='js/bootstrap.js') }}"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>
